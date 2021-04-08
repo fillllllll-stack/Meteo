@@ -1,0 +1,146 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link type="text/css" rel="StyleSheet" href="https://bootstraptema.ru/plugins/2016/shieldui/style.css" />
+<script src="https://bootstraptema.ru/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="https://bootstraptema.ru/plugins/2016/shieldui/script.js"></script>
+<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Meteo</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+        <div class="site-content">
+			<div class="site-header">
+				<div class="container">
+					<a href="index.html" class="branding">
+						<img src="images/logo.png" alt="" class="logo">
+						<div class="logo-type">
+							<h1 class="site-title">Meteo</h1>
+							<small class="site-description">Meteo</small>
+						</div>
+					</a>
+
+					
+					<div class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item "><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="news.html">Știri</a></li>
+							<li class="menu-item"><a href="live-cameras.html">Camere live</a></li>
+							<li class="menu-item current-menu-item"><a href="grafice.html">Grafice</a></li>
+							<li class="menu-item"><a href="contact.html">Harta</a></li>
+							<li class="menu-item"><a href="log.html">Iesire</a></li>
+
+						</ul> <!-- .menu -->
+					</div> <!-- .main-navigation -->
+
+					<div class="mobile-navigation"></div>
+
+				</div>
+			</div> <!-- .site-header -->
+            <div style="text-align: center;"><h2>De la</h2><input type="date" id="start" name="trip-start"
+                value="2021-04-30"
+                min="2021-04-01" max="2021-04-30">
+                <p><h2>Pana la</h2> <input type="date" id="start" name="trip-start"
+                    value="2021-04-30"
+                    min="2021-04-01" max="2021-04-30"></p></div>
+            
+
+<br><br><br>
+
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+
+<!-- График --><div id="chart"></div>
+
+<script>
+ $(function () {
+ $("#chart").shieldChart({
+ theme: "light",
+ primaryHeader: {
+ text: "Indicatorii climaterici"
+ },
+ exportOptions: {
+ image: false,
+ print: false
+ },
+ axisY: [{
+ min: 1,
+ max: 100,
+ title: {
+ text: 'umiditate',
+ style: {
+ color: '#4DB0F5'
+ }
+ },
+ axisTickText: {
+ style: {
+ color: '#4DB0F5'
+ }
+ }
+ }, {
+ min: 700,
+ max: 800,
+ title: {
+ text: 'Presiune',
+ style: {
+ color: '#FFC500'
+ }
+ },
+ swapLocation: true,
+ axisTickText: {
+ style: {
+ color: '#FFC500'
+ }
+ }
+ }, {
+ min: -30,
+ max: 50,
+ title: {
+ text: 'Temperatura',
+ style: {
+ color: '#FF1800'
+ }
+ },
+ swapLocation: true,
+ axisTickText: {
+ style: {
+ color: '#FF1800'
+ }
+ }
+ }],
+ dataSeries: [{
+ seriesType: 'line',
+ axis: 0,
+ collectionAlias: "Umiditate",
+ data: [72.7, 52.8, 63.1, 73.5, 53, 55.8, 57.7]
+ }, {
+ seriesType: 'line',
+ axisY: 1,
+ collectionAlias: "Presiune",
+ data: [755, 780, 745, 766, 734, 756, 777]
+ }, {
+ seriesType: 'line',
+ axisY: 2,
+ collectionAlias: "Temperatura",
+ data: [10, 12.9, 12.1, 11, 12.8, 12.4, 12.10]
+ }]
+ });
+ });
+ 
+ </script><!-- /.График -->
+ <div>
+</br>
+</br>
+</br>
+</div>
+
+</div><!-- /.col-md-8 col-md-offset-2 -->
+</div><!-- /.row -->
+</div><!-- /.container -->

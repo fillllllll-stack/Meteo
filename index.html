@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Meteo</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+		<style>
+		.content-item {
+			padding:30px 0;
+			
+		}
+		
+		.content-item.grey {
+			
+			padding:50px 0;
+			height:100%;
+		}
+		
+		.content-item h2 {
+			font-weight:700;
+			font-size:35px;
+			line-height:45px;
+			text-transform:uppercase;
+			margin:20px 0;
+		}
+		
+		.content-item h3 {
+			font-weight:400;
+			font-size:20px;
+			color:#555555;
+			margin:10px 0 15px;
+			padding:0;
+		}
+		
+		.content-headline {
+			height:1px;
+			text-align:center;
+			margin:20px 0 70px;
+		}
+		
+		.content-headline h2 {
+			
+			display:inline-block;
+			margin:-20px auto 0;
+			padding:0 20px;
+		}
+		
+		.grey .content-headline h2 {
+			
+		}
+		
+		.content-headline h3 {
+			font-size:14px;
+			;
+			display:block;
+		}
+		
+		
+		#comments {
+			box-shadow: 0 -1px 6px 1px rgba(0,0,0,0.1);
+		}
+		
+		#comments form {
+			margin-bottom:30px;
+		}
+		
+		#comments .btn {
+			margin-top:7px;
+		}
+		
+		#comments form fieldset {
+			clear:both;
+		}
+		
+		#comments form textarea {
+			height:100px;
+		}
+		
+		#comments .media {
+			
+			padding:20px 0;
+			margin:0;
+			
+		}
+		
+		#comments .media > .pull-left {
+			margin-right:20px;
+		}
+		
+		#comments .media img {
+			max-width:100px;
+		}
+		
+		#comments .media h4 {
+			margin:0 0 10px;
+		}
+		
+		#comments .media h4 span {
+			font-size:14px;
+			float:right;
+			color:black;
+		}
+		
+		#comments .media p {
+			margin-bottom:15px;
+			text-align:justify;
+		}
+		
+		#comments .media-detail {
+			margin:0;
+		}
+		
+		#comments .media-detail li {
+			color:#AAAAAA;
+			font-size:12px;
+			padding-right: 10px;
+			font-weight:600;
+		}
+		
+		#comments .media-detail a:hover {
+			text-decoration:underline;
+		}
+		
+		#comments .media-detail li:last-child {
+			padding-right:0;
+		}
+		
+		#comments .media-detail li i {
+			color:#666666;
+			font-size:15px;
+			margin-right:10px;
+		}
+		
+			</style>
+
+	</head>
+
+
+	<body>
+		
+		<div class="site-content">
+			<div class="site-header">
+				<div class="container">
+					<a href="index.html" class="branding">
+						<img src="images/logo.png" alt="" class="logo">
+						<div class="logo-type">
+							<h1 class="site-title">Meteo</h1>
+							<small class="site-description">Meteo</small>
+						</div>
+					</a>
+
+					
+					<div class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="news.html">Știri</a></li>
+							<li class="menu-item"><a href="live-cameras.html">Camere live</a></li>
+							<li class="menu-item"><a href="grafice.html">Grafice</a></li>
+							<li class="menu-item"><a href="contact.html">Harta</a></li>
+							<li class="menu-item"><a href="log.html">Iesire</a></li>
+
+						</ul> <!-- .menu -->
+					</div> <!-- .main-navigation -->
+
+					<div class="mobile-navigation"></div>
+
+				</div>
+			</div> <!-- .site-header -->
+
+			<div class="hero" data-bg-image="images/banner.png">
+				<div class="container">
+					<form action="#" class="find-location">
+						<input type="text" placeholder="Introduceti locatia...">
+						<input type="submit" value="Cautare">
+					</form>
+
+				</div>
+			</div>
+			<div class="forecast-table">
+				<div class="container">
+					<div class="forecast-container">
+						<div class="today forecast">
+							<div class="forecast-header">
+								<div class="day">Luni</div>
+								<div class="date">6 martie</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="location">Chișinau</div>
+								<div class="degree">
+									<div class="num">3<sup>o</sup>C</div>
+									<div class="forecast-icon">
+										<img src="images/icons/icon-1.svg" alt="" width=90>
+									</div>	
+								</div>
+								<span><img src="images/icon-umberella.png" alt="">20%</span>
+								<span><img src="images/icon-wind.png" alt="">18km/h</span>
+								<span><img src="images/icon-compass.png" alt="">Est</span>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div class="day">Marți</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img src="images/icons/icon-3.svg" alt="" width=48>
+								</div>
+								<div class="degree">2<sup>o</sup>C</div>
+								<small>8<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div class="day">Miercuri</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img src="images/icons/icon-5.svg" alt="" width=48>
+								</div>
+								<div class="degree">6<sup>o</sup>C</div>
+								<small>8<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div class="day">Joi</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img src="images/icons/icon-7.svg" alt="" width=48>
+								</div>
+								<div class="degree">3<sup>o</sup>C</div>
+								<small>7<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div class="day">Vineri</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img src="images/icons/icon-12.svg" alt="" width=48>
+								</div>
+								<div class="degree">7<sup>o</sup>C</div>
+								<small>8<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div class="day">Sîmbătă</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img src="images/icons/icon-13.svg" alt="" width=48>
+								</div>
+								<div class="degree">23<sup>o</sup>C</div>
+								<small>18<sup>o</sup></small>
+							</div>
+						</div>
+						<div class="forecast">
+							<div class="forecast-header">
+								<div class="day">Duminică</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="forecast-icon">
+									<img src="images/icons/icon-14.svg" alt="" width=48>
+								</div>
+								<div class="degree">10<sup>o</sup>C</div>
+								<small>12<sup>o</sup></small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<h2 class="section-title">Camere live</h2>
+						<div class="row">
+							<div class="col-md-3 col-sm-6">
+								<div class="live-camera">
+<iframe									iframe  src="https://www.youtube.com/embed/eJ7ZkQ5TC08?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
+									<h3 class="location">New York</h3>
+									<iframe src="https://free.timeanddate.com/clock/i7qy6fd2/n179/tlro32/fcfff/tc1e202b/ahl/tt0" frameborder="0" width="245" height="18"></iframe>
+
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="live-camera">
+									<iframe  src="https://www.youtube.com/embed/wCcMcaiRbhM?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<h3 class="location">Sankt Peterburg</h3>
+									<iframe src="https://free.timeanddate.com/clock/i7qy6jm0/n352/tlro32/fcfff/tc1e202b/ahl/tt0" frameborder="0" width="245" height="18"></iframe>
+
+										
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="live-camera">
+									<iframe src="https://www.youtube.com/embed/a0fiA05TzGY?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<h3 class="location">Chisinau</h3>
+									<iframe src="https://free.timeanddate.com/clock/i7qy6pav/n177/tlro32/fcfff/tc1e202b/ahl/tt0" frameborder="0" width="245" height="18"></iframe>
+
+									</small>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="live-camera">
+									<iframe src="https://www.youtube.com/embed/QOjmvL3e7Lc?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<h3 class="location">Tokyo</h3>
+									<iframe src="https://free.timeanddate.com/clock/i7qy6mbw/n248/tlro32/fcfff/tc1e202b/ahl/tt0" frameborder="0" width="245" height="18"></iframe>
+		
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="fullwidth-block" data-bg-color="#262936" style="background: blanchedalmond;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="news">
+									
+									<script type="text/javascript" language="javascript" src="https://www.rssdog.com/index.php?url=http%3A%2F%2Frss.publika.md%2Fstiri.xml&amp;mode=javascript&amp;showonly=&amp;maxitems=10&amp;showdescs=1&amp;desctrim=0&amp;descmax=0&amp;tabwidth=100%25&amp;showdate=1&amp;utf8=1&amp;linktarget=_blank&amp;bordercol=%23262936&amp;headbgcol=%23262936&amp;headtxtcol=%23262936&amp;titlebgcol=%23262936&amp;titletxtcol=%23262936&amp;itembgcol=%23262936&amp;itemtxtcol=%23FFFFFF&amp;ctl=0">
+									</script>							
+				</div>
+				
+
+				<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<section class="content-item" id="comments">
+    <div class="container">   
+    	<div class="row">
+            <div class="col-sm-8" >   
+                
+                
+                <h3>4 Comentarii</h3>
+                
+                <!-- COMMENT 1 - START -->
+                <div class="media" >
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Ion</h4>
+                        <p>Ce vreme frumoasa</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar"></i>3/23/2021</li>
+                            <li><i class="fa fa-thumbs-up"></i>13</li>
+                        </ul>
+                        <ul class="list-unstyled list-inline media-detail pull-right">
+                            <li class=""><a href="">Like</a></li>
+                            <li class=""><a href="">Raspuns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- COMMENT 1 - END -->
+                
+                <!-- COMMENT 2 - START -->
+                <div class="media" style="position: relative; left: -120px; ">
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt=""></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Vasile</h4>
+                        <p>Ce pacat ca maine va ploua</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar"></i>3/24/2021</li>
+                            <li><i class="fa fa-thumbs-up"></i>13</li>
+                        </ul>
+                        <ul style="position: relative; left: 120px;" class="list-unstyled list-inline media-detail pull-right">
+                            <li class=""><a href="">Like</a></li>
+                            <li class=""><a href="">Raspuns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- COMMENT 2 - END -->
+                
+                <!-- COMMENT 3 - START -->
+                <div class="media" style="position: relative; left: -240px; ">
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Iulia</h4>
+                        <p>Frumos!</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar"></i>3/23/2021</li>
+                            <li><i class="fa fa-thumbs-up"></i>1</li>
+                        </ul>
+                        <ul style="position: relative; left: 240px;" class="list-unstyled list-inline media-detail pull-right">
+                            <li class=""><a href="">Like</a></li>
+                            <li class=""><a href="">Raspuns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- COMMENT 3 - END -->
+                
+                <!-- COMMENT 4 - START -->
+                <div class="media" style="position: relative; left: -360px; ">
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt=""></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Iulian</h4>
+                        <p>Frumos!</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar"></i>3/23/2021</li>
+                            <li><i class="fa fa-thumbs-up"></i>1</li>
+                        </ul>
+                        <ul style="position: relative; left: 360px;" class="list-unstyled list-inline media-detail pull-right">
+                            <li class=""><a href="">Like</a></li>
+                            <li class=""><a href="">Raspuns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- COMMENT 4 - END -->
+				<script>
+					function myFunction() {
+					  var c = document.createElement("div");
+
+
+					}
+					</script>
+				<form>
+				
+                	<button onclick="myFunction()" type="submit" class="btn btn-normal pull-right" style="position: relative; bottom:-300px;">Trimite</button>
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-sm-3 col-lg-2 hidden-xs">
+                            	<img class="img-responsive" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-9 col-lg-10">
+							
+                                <textarea style="text-align: center;"class="form-control" id="message" placeholder="Mesajul tau" required=""></textarea>
+                            </div>
+                        </div>  	
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+		
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
